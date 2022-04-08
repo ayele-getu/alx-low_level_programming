@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Empty point
+ * main - Entry point
  *
  * Return: Always 0 (Success/correct)
  */
@@ -14,7 +14,7 @@ for (i = 48; i <= 57; i++)
 putchar (i);
 }
 
-putchar ("\n");
+putchar ('\n');
 
 return (0);
 
