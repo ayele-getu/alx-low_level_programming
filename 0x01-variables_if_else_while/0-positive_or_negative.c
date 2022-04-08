@@ -24,7 +24,7 @@ int main(void)
        }
        else
        {
-	       printf("%i id positive\n", n);
+	       printf("%i is positive\n", n);
        }
 
        return (0);
