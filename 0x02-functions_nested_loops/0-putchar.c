@@ -2,13 +2,11 @@
 
 /**
  *
- *  * main - Entry point
+ * main - Entry point
  *
- *   *
+ * Return: nothing, return void
  *
- *    * Return: nothing, return void
- *
- *     */
+ **/
 
 int main(void)
 {
