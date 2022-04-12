@@ -6,7 +6,7 @@
  * @n: The value of the times table to be printed.
  */
 
-void times_table(int n)
+int times_table(int n)
 {
 	int num, mult, prod;
 	if (n >= 0 && n <= 15)
