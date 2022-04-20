@@ -3,14 +3,13 @@
 /**
  * cap_string - capitalizes all words of a string.
  * @s: string to use.
- *
  * Return: string.
  */
 
 char *cap_string(char *s)
 {
 	int i = 1, j, check;
-	char a[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
+char a[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
 
 	if (s[0] > 96 && s[0] < 123)
 		s[0] -= 32;
@@ -36,5 +35,5 @@ char *cap_string(char *s)
 		}
 		i++
 	}
-	return (s);
+return (s);
 }
