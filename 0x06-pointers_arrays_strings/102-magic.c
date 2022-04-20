@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * print_number - print a number using _putchar.
+ * @n: the number to be printed.
+ */
+
 int main(void)
 {
 	int n;
