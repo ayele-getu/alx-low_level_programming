@@ -2,6 +2,6 @@
 
 int main(void)
 {
-_puts("\"_putchar\"\n- Kevin Mitnick");
+_puts("\"_putchar\"- Kevin Mitnick");
 return (0);
 }
