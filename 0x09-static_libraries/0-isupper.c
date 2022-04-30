@@ -1,6 +1,7 @@
 #include "main.h"
 
-int main(void)
+int _isupper(int c)
 {
-	int _isupper(int c);
+	int main(void);
+	return (0);
 }
