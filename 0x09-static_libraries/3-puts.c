@@ -3,5 +3,5 @@
 int main()
 {
 	_puts("Kevin Mitnick");
-	return (0);
+	return 0;
 }
