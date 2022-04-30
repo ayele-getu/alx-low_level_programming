@@ -1,7 +1,7 @@
 #include "main.h"
 
-int main()
+int main(void)
 {
-	void _puts(char *s);
+	_puts("At the end of the day, my goal was to be th bbest hacker\"\n\t- Kevin Mitnick");
 	return (0);
 }
