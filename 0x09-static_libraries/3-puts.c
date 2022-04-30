@@ -1,6 +1,6 @@
 #include "main.h"
 
-int main(void)
+int main()
 {
 	_puts("Kevin Mitnick");
 	return (0);
