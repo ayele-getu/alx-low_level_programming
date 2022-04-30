@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	_puts("\"\"\n\t- Kevin Mitnick");
+	void _puts(char *s);
 	return (0);
 }
