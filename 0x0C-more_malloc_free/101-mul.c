@@ -2,55 +2,97 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
+ * _isNum - check if is a number
+ * @num: string to check
+ * Return: 1 is numm, 0 not num
  */
-
-void simple_print_buffer(char *buffer, unsigned int size)
+int _isNum(char *num)
 {
-	unsigned int i;
+	int i;
 
-	i = 0;
-	while (i < size)
+	for (i = 0; num[i] != '\0'; i++)
 	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
-		i++;
+		if (num[i] < '0' || num[i] > '9')
+			return (0);
 	}
-	printf("\n");
+	return (1);
 }
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * *_memset - copies a character to the firstn characters of the string pointed
+ * @s: original string
+ * @b: value to remplace
+ * @n: number of bytes
+ * Return: s (string modify)
  */
-
-int main(void)
+char *_memset(char *s, char b, unsigned int n)
 {
-	char *p;
-	int i;
+	unsigned int i;
 
-	p = malloc(sizeof(char) * 10);
-	p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
-	i = 0;
-	while (i < 98)
+	for (i = 0; i < n; i++)
+		s[i] = b;
+	return (s);
+}
+
+/**
+ * _strlen - returns the lenght of a string
+ * @s: poiter of character
+ * Return: the length of a string
+ */
+int _strlen(char *s)
+{
+	int len;
+
+	len = 0;
+	while (*(s + len) != '\0')
+		len++;
+	return (len);
+}
+
+/**
+ * main - multiple 2 positive numbers
+ * @argc: argument counter
+ * @argv: number to multiply
+ * Return: 0 (success)
+ */
+int main(int argc, char *argv[])
+{
+	int length, c, prod, i, j, l1, l2;
+	int *res;
+
+	if ((argc != 3 || !(_isNum(argv[1]))) || !(_isNum(argv[2])))
+		puts("Error"), exit(98);
+	l1 = _strlen(argv[1]), l2 = _strlen(argv[2]);
+	length = l1 + l2;
+	res = calloc(length, sizeof(int *));
+	if (res == NULL)
+		puts("Error"), exit(98);
+	for (i = l2 - 1; i > -1; i--)
 	{
-		p[i++] = 98;
+		c = 0;
+		for (j = l1; j > -1; j--)
+		{
+			prod = (argv[2][i] - '0') * (argv[1][j] - '0');
+			c = (prod / 10);
+			res[(i + j) + 1] += (prod % 10);
+			if (res[(i + j) + 1] > 9)
+			{
+				res[i + j] += res[(i + j) + 1] / 10;
+				res[(i + j) + 1] = res[(i + j) + 1] % 10;
+			}
+			res[(i + j) + 1] += c;
+		}
 	}
-	simple_print_buffer(p, 98);
-	free(p);
+
+	if (res[0] == 0)
+		i = 1;
+	else
+		i = 0;
+	for (; i < length; i++)
+		printf("%d", res[i]);
+
+	printf("\n");
+	free(res);
 	return (0);
 }
