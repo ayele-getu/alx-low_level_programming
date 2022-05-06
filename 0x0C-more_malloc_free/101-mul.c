@@ -84,6 +84,7 @@ void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
 		mul /= 10;
 		k--;
 	}
+
 	return (a3);
 }
 /**
