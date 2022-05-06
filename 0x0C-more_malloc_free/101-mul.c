@@ -77,15 +77,15 @@ void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
 		k--;
 	}
 
-		while (mul != 0)
-		{
-			mul += a3[k] - '0';
-			a3[k] = (mul % 10) + '0';
-			mul /= 10;
-			k--;
-		}
+	while (mul != 0)
+	{
+		mul += a3[k] - '0';
+		a3[k] = (mul % 10) + '0';
+		mul /= 10;
+		k--;
+	}
 
-		return (a3);
+	return (a3);
 }
 /**
  * print_array - print all digits of array.
@@ -112,7 +112,7 @@ void print_array(char *a, int nb)
  * @argc: array length.
  * @argv: array.
  * Return: 0.
- **/
+ */
 
 int main(int argc, char *argv[])
 {
