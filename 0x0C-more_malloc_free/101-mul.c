@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * _atoi_digit - convert a char to integer.
