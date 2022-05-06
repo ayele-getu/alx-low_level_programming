@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _atoi_digit - convert a char to integer.
@@ -71,6 +69,7 @@ void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
 	int mul = 0, i, k;
 
 	k = lena;
+
 	for (i = len1 - 1; i >= 0 ; i--)
 	{
 		mul += (a1[i] - '0') * (a2 - '0') + (a3[k] - '0');
@@ -79,13 +78,13 @@ void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
 		k--;
 	}
 
-		while (mul != 0)
-		{
-			mul += a3[k] - '0';
-			a3[k] = (mul % 10) + '0';
-			mul /= 10;
-			k--;
-		}
+	while (mul != 0)
+	{
+		mul += a3[k] - '0';
+		a3[k] = (mul % 10) + '0';
+		mul /= 10;
+		k--;
+	}
 
 	return (a3);
 }
@@ -102,6 +101,7 @@ void print_array(char *a, int nb)
 	{
 		i++;
 	}
+
 	for (; i < nb; i++)
 	{
 		_putchar(a[i]);
