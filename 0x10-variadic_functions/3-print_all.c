@@ -90,6 +90,7 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				arguments[j].function(args);
 				separator = ", ";
+
 			}
 			j++;
 		}
