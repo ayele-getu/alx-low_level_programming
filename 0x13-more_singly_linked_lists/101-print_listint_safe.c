@@ -5,7 +5,7 @@
  * Description: this function print a string in a safe mode
  * section header: the header of this function is lists.h)*
  * Return: the size of the list
- */
+ * */
 size_t print_listint_safe(const listint_t *head)
 {
 	int difference, i, number;
