@@ -32,4 +32,4 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		actual->next = node;
 	}
 	return (node);
-};
+}
