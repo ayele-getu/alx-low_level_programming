@@ -20,4 +20,4 @@ void free_listint(listint_t *head)
 		free(position);
 	}
 	head = '\0';
-}
+};
